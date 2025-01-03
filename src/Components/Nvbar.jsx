@@ -20,6 +20,9 @@ const NavBar = () => {
         <li>
           <a href="#contact">Contact</a>
         </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
   );

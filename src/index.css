@@ -1,4 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Import Satoshi font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+
+*{
+    font-family:'poppins',sans-serif;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('./assets/fonts/mycustomfont.woff2') format('woff2'),
+       url('./assets/fonts/mycustomfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

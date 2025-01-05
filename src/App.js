@@ -1,17 +1,13 @@
 import './index.css'; // Ensure Tailwind is configured in this file
-import Button from './components/Button'; 
 import NavBar from './components/NavBar';
-
+import HeroSection from './components/HeroSection';
 function App() {
-  const handleClick = () => {
-    console.log("Button clicked!");
-  };
 
   return (
     <div>
       <NavBar/>
-      <Button text="Primary Button" onClick={handleClick} styleType="primary" />
-      <Button text="Secondary Button" onClick={handleClick} styleType="secondary" />
+       <div className="max-7-xl mx-auto pt-20 px-6"></div>
+       <HeroSection/>
     </div>
   );
 }

@@ -1,0 +1,27 @@
+.feature-card {
+  width: 292px;
+  height: 213px;
+  padding: 30px;
+  background: white;
+  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.feature-icon {
+  position: relative;
+}
+
+.feature-text {
+  align-self: stretch;
+  color: black;
+  font-size: 24px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  line-height: 30.48px;
+  word-wrap: break-word;
+}

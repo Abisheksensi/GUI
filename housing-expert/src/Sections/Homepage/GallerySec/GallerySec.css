@@ -1,0 +1,168 @@
+.gallery-section {
+  max-width: 100%;
+  padding: 60px 120px 0px 120px; 
+}
+
+.gallery-container {
+    max-width: 100%; /* Ensure container does not exceed screen width */
+    margin: 0 auto; /* Center the container */
+    display: flex;
+    gap: 20px; /* Space between cards and image */
+    justify-content: space-between; /* Space cards and image evenly */
+    align-items: center; /* Align items vertically */
+    overflow-x: hidden; /* Prevent horizontal scroll bar */
+}
+
+/* Gallery Cards Layout */
+.gallery-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between rows */
+}
+
+.gallery-row {
+  display: flex;
+  gap: 20px; /* Space between cards in a row */
+}
+
+/* Style for GalleryCard */
+.gallery-card {
+  width: 280px; /* Slightly smaller to fit layout, adjust as needed */
+  height: 200px; /* Adjusted to fit layout */
+  padding: 20px;
+  background: white; /* White cards for top row */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s; /* For hover effect */
+}
+
+.gallery-card:nth-child(3) {
+  background: #5b5b5b; /* Gray for bottom-left card */
+  color: white; /* White text for contrast */
+}
+
+.gallery-card:nth-child(4) {
+  background: #f1efed; /* Light gray for bottom-right card */
+  color: black; /* Black text for contrast */
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Icon Image Styling */
+.gallery-icon {
+  width: 62px; /* Match the SVG icon size, adjust based on your icon SVGs */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between icon and text */
+}
+
+.gallery-image {
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+/* Text Styling */
+.gallery-text {
+  color: black; /* Default text color for white/light gray cards */
+  font-size: 20px; /* Slightly smaller to fit */
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.gallery-card:nth-child(3) .gallery-text,
+.gallery-card:nth-child(4) .gallery-text {
+  color: white; /* White text for gray cards */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .gallery-container {
+    flex-direction: column; /* Stack cards and image on tablets */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .gallery-cards {
+    width: 100%;
+    max-width: 600px; /* Limit card area width */
+  }
+
+  .gallery-row {
+    justify-content: center; /* Center cards in rows on smaller screens */
+  }
+
+  .gallery-card {
+    width: 250px; /* Smaller cards on tablets */
+    height: 180px; /* Adjusted height */
+  }
+
+  .gallery-icon {
+    width: 50px; /* Smaller icons on tablets */
+  }
+
+  .gallery-text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .gallery-image {
+    width: 100%;
+    max-width: 500px; /* Smaller image on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 20px 10px; /* Less padding on mobile */
+  }
+
+  .gallery-card {
+    width: 220px; /* Even smaller on mobile */
+    height: 160px; /* Adjusted height */
+    padding: 15px;
+  }
+
+  .gallery-icon {
+    width: 40px; /* Smaller icons on mobile */
+  }
+
+  .gallery-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .gallery-image {
+    max-width: 400px; /* Smaller image on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-row {
+    flex-direction: column; /* Stack cards vertically on very small screens */
+    align-items: center;
+  }
+
+  .gallery-card {
+    width: 100%;
+    max-width: 200px; /* Full width, limited max */
+    height: auto; /* Adjust height based on content */
+  }
+
+  .gallery-icon {
+    width: 35px; /* Smallest icons on very small screens */
+  }
+
+  .gallery-image {
+    max-width: 300px; /* Smallest image on very small screens */
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeroSec.css"; // Import the custom CSS
 import parallex from "../../../assets/images/parallex.png"; // Adjust path as needed
-import HeroCard from "../../../Components/Cards/HeroCard/HeroCard"; // Fixed typo: HeroCrad -> HeroCard
+import HeroCard from "../../../Components/Cards/HeroCard/HeroCard"; // Fixed typo
 
 const HeroSec = () => {
   return (
@@ -13,7 +13,7 @@ const HeroSec = () => {
           <span className="hero-part2">AI</span>
         </div>
       </div>
-      <HeroCard className="hero-card" /> {/* Add class for positioning */}
+      <HeroCard className="hero-card" /> {/* Moved outside hero-content for absolute positioning */}
     </div>
   );
 };

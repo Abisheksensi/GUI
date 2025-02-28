@@ -1,0 +1,6 @@
+.gallery-image {
+  width: 608px;
+  height: 450px;
+  border-radius: 16px;
+  object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+}

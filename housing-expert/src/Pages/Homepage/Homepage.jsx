@@ -7,6 +7,7 @@ import MapSec from "../../Sections/Homepage/MapSec/MapSec";
 import Footer from "../../Sections/Homepage/Footer/Footer";
 import NavBar from "../../Components/NavBar/NavBar";
 
+
 export class Homepage extends Component {
   static propTypes = {};
 

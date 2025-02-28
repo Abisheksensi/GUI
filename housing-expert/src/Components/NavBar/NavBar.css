@@ -1,11 +1,14 @@
 /* Navbar Container */
 .navbar {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0.5rem;
-  background-color: white;
-  border-radius: 9999px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1280px;
+    height: 50px;
+    margin: 16px auto; /* Center the navbar horizontally */
+    padding: 24px;
+    background-color: white;
+    border-radius: 9999px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 /* Navbar Inner Container */
@@ -14,13 +17,19 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+  flex-wrap: wrap;
 }
 
 /* Brand */
 .navbar-brand {
-  font-weight: 500;
-  color: #1e3a8a;
+  display: flex;
+  align-items: center;
   text-decoration: none;
+}
+
+.navbar-logo {
+  height: 2.75rem; /* Reduced from 2rem */
+  width: auto;
 }
 
 /* Nav List */
@@ -28,6 +37,8 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-grow: 1;
+  justify-content: flex-start;
 }
 
 /* Nav Item */
@@ -55,9 +66,11 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 
 .chevron {
+  font-size: 0.75rem;
   transition: transform 0.2s;
 }
 
@@ -70,14 +83,16 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 36rem;
+  width: 100%;
+  max-width: 36rem;
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: grid;
-  grid-template-columns: 3fr 4fr;
+  grid-template-columns: 1fr;
   gap: 0.75rem;
   padding: 1rem;
+  z-index: 10;
 }
 
 .menu-card {
@@ -87,7 +102,7 @@
   background: linear-gradient(to bottom, #3b82f6, #1e40af);
   color: white;
   border-radius: 0.375rem;
-  font-size: 2rem;
+  padding: 1rem;
 }
 
 .menu-items {
@@ -112,6 +127,7 @@
 .menu-item p {
   font-size: 0.875rem;
   color: #6b7280;
+  word-wrap: break-word;
 }
 
 /* Mobile Toggle */
@@ -130,6 +146,11 @@
   border: none;
   color: #4b5563;
   cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+  background-color: #f3f4f6;
 }
 
 /* Profile Menu */
@@ -154,6 +175,7 @@
   border: 2px solid #1f2937;
 }
 
+/* Profile Dropdown */
 .profile-dropdown {
   position: absolute;
   top: 100%;
@@ -164,6 +186,8 @@
   list-style: none;
   padding: 0.25rem;
   margin: 0;
+  width: 10rem;
+  z-index: 10;
 }
 
 .profile-item {
@@ -190,8 +214,10 @@
 
 /* Mobile Nav */
 .mobile-nav {
+  width: 100%;
+  background-color: white;
   padding: 1rem;
-  overflow-y: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-pages {
@@ -200,20 +226,101 @@
   margin: 0;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 960px) {
-  .nav-list {
-    flex-direction: column;
-    align-items: flex-start;
+/* Responsive Breakpoints */
+@media (max-width: 640px) {
+  .navbar {
+    border-radius: 0;
   }
 
-  .mobile-nav {
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+
+  .navbar-logo {
+    height: 1.25rem; /* Reduced from 1.5rem */
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .mobile-toggle {
     display: block;
+  }
+
+  .login-btn {
+    display: none;
+  }
+
+  .mobile-nav .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .pages-menu {
+    position: static;
+    box-shadow: none;
+    padding: 0;
   }
 }
 
-@media (min-width: 961px) {
+@media (min-width: 641px) and (max-width: 959px) {
+  .navbar {
+    padding: 0.75rem;
+  }
+
+  .navbar-container {
+    flex-wrap: nowrap;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .login-btn {
+    display: block;
+  }
+
+  .mobile-nav {
+    padding: 0.75rem;
+  }
+
+  .pages-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-nav .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-list {
+    display: flex;
+  }
+
+  .mobile-toggle {
+    display: none;
+  }
+
   .mobile-nav {
     display: none;
+  }
+
+  .pages-menu {
+    grid-template-columns: 3fr 4fr;
   }
 }

@@ -1,0 +1,70 @@
+.hero-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  width: 100%; /* Full width for centering */
+}
+
+.hero-part1 {
+  color: #2d2d2d; /* Dark gray */
+  font-size: 108px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.hero-part2 {
+  color: #8136e7; /* Purple */
+  font-size: 108px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+
+.property-card {
+  width: 524px;
+  height: 145px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  border: 2px solid white;
+  backdrop-filter: blur(10px);
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.property-image {
+  width: 96px;
+  height: 96px;
+}
+
+.property-content {
+  flex: 1 1 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+.property-title {
+  align-self: stretch;
+  color: #656e73;
+  font-size: 24px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 900;
+  word-wrap: break-word;
+}
+
+.property-description {
+  align-self: stretch;
+  color: #656e73;
+  font-size: 18px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}

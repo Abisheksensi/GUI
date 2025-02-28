@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./NavBar.css"; // Import the custom CSS
-import logo from "../../assets/logo.png"; // Import the logo image
+import "./NavBar.css"; // Import the updated custom CSS
+import logo from "../../assets/Logo/logo.png";
+// Import Lucide Icons
+import { User, Settings, Inbox, HelpCircle, LogOut, Box, FileText, Rocket } from "lucide-react";
 
 const NavBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -17,11 +19,11 @@ const NavBar = () => {
   }, []);
 
   const profileMenuItems = [
-    { label: "My Profile", icon: "👤" },
-    { label: "Edit Profile", icon: "⚙️" },
-    { label: "Inbox", icon: "📥" },
-    { label: "Help", icon: "⛑️" },
-    { label: "Sign Out", icon: "🚪" },
+    { label: "My Profile", icon: User },
+    { label: "Edit Profile", icon: Settings },
+    { label: "Inbox", icon: Inbox },
+    { label: "Help", icon: HelpCircle },
+    { label: "Sign Out", icon: LogOut },
   ];
 
   const navListMenuItems = [
@@ -43,16 +45,16 @@ const NavBar = () => {
   ];
 
   const navListItems = [
-    { label: "Account", icon: "👤" },
-    { label: "Blocks", icon: "🟥" },
-    { label: "Docs", icon: "📜" },
+    { label: "Account", icon: User },
+    { label: "Blocks", icon: Box },
+    { label: "Docs", icon: FileText },
   ];
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <a href="#" className="navbar-brand">
-          Material Tailwind
+          <img src={logo} alt="Material Tailwind Logo" className="navbar-logo" />
         </a>
 
         {/* Desktop Nav List */}
@@ -65,11 +67,16 @@ const NavBar = () => {
               onMouseEnter={() => setIsPagesMenuOpen(true)}
               onMouseLeave={() => setIsPagesMenuOpen(false)}
             >
-              Pages <span className={`chevron ${isPagesMenuOpen ? "rotate" : ""}`}>▼</span>
+              Pages{" "}
+              <span className={`chevron ${isPagesMenuOpen ? "rotate" : ""}`}>
+                ▼
+              </span>
             </a>
             {isPagesMenuOpen && (
               <div className="dropdown-menu pages-menu">
-                <div className="menu-card">🚀</div>
+                <div className="menu-card">
+                  <Rocket size={32} color="white" />
+                </div>
                 <ul className="menu-items">
                   {navListMenuItems.map(({ title, description }) => (
                     <li key={title}>
@@ -85,9 +92,9 @@ const NavBar = () => {
           </div>
 
           {/* Other Nav Items */}
-          {navListItems.map(({ label, icon }) => (
+          {navListItems.map(({ label, icon: Icon }) => (
             <a key={label} href="#" className="nav-item">
-              <span className="icon">{icon}</span> {label}
+              <Icon size={18} className="icon" /> {label}
             </a>
           ))}
         </div>
@@ -120,7 +127,7 @@ const NavBar = () => {
           </button>
           {isProfileMenuOpen && (
             <ul className="profile-dropdown">
-              {profileMenuItems.map(({ label, icon }, index) => (
+              {profileMenuItems.map(({ label, icon: Icon }, index) => (
                 <li
                   key={label}
                   onClick={closeProfileMenu}
@@ -128,7 +135,7 @@ const NavBar = () => {
                     index === profileMenuItems.length - 1 ? "sign-out" : ""
                   }`}
                 >
-                  <span className="icon">{icon}</span>
+                  <Icon size={16} className="icon" />
                   <span>{label}</span>
                 </li>
               ))}
@@ -154,9 +161,9 @@ const NavBar = () => {
                 ))}
               </ul>
             </div>
-            {navListItems.map(({ label, icon }) => (
+            {navListItems.map(({ label, icon: Icon }) => (
               <a key={label} href="#" className="nav-item">
-                <span className="icon">{icon}</span> {label}
+                <Icon size={18} className="icon" /> {label}
               </a>
             ))}
           </div>

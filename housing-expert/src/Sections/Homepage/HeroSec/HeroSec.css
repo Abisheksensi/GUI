@@ -1,0 +1,123 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height for a hero section */
+  background-size: cover; /* Ensures the image covers the section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text on the image */
+  z-index: 2; /* Above the background */
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  text-align: center; /* Ensure text stays centered */
+}
+
+.hero-part1 {
+  color: #2d2d2d; /* Dark gray */
+  font-size: 108px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.hero-part2 {
+  color: #8136e7; /* Purple */
+  font-size: 108px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+/* Position HeroCard (PropertyCard) in bottom-right corner */
+.hero-card {
+  position: absolute;
+  bottom: 2rem; /* Distance from bottom */
+  right: 2rem; /* Distance from right */
+  z-index: 3; /* Above text and background */
+  width: 100%;
+  max-width: 524px; /* Match PropertyCard width */
+}
+
+/* Apply PropertyCard styles with adjustments for hero context */
+.hero-card.property-card {
+  background: rgba(255, 255, 255, 0.9); /* Slightly opaque for readability */
+  border: 2px solid transparent;
+  background: linear-gradient(90deg, #8136e7, #ffffff) border-box; /* Purple to white gradient */
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Ensure text alignment and spacing match the image */
+.hero-card .property-title,
+.hero-card .property-description {
+  color: #656e73;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.hero-card .property-title {
+  font-size: 24px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 900;
+}
+
+.hero-card .property-description {
+  font-size: 18px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 80vh; /* Shorter on mobile */
+  }
+
+  .hero-text {
+    top: 40%; /* Adjust position on mobile for better visibility */
+  }
+
+  .hero-part1, .hero-part2 {
+    font-size: 48px; /* Smaller text on tablets and mobile */
+  }
+
+  .hero-card {
+    bottom: 1rem; /* Closer to bottom on mobile */
+    right: 1rem; /* Closer to right on mobile */
+    max-width: 100%; /* Full width on mobile */
+    width: 90%; /* Slightly less than full to avoid overflow */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-part1, .hero-part2 {
+    font-size: 36px; /* Even smaller on very small screens */
+  }
+
+  .hero-card {
+    bottom: 0.5rem; /* Even closer on very small screens */
+    right: 0.5rem; /* Even closer on very small screens */
+    width: 85%; /* Adjust width for very small screens */
+  }
+}

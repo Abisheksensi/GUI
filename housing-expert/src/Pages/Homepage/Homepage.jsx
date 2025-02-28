@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import HeroSec from "Sections/Homepage/HeroSec/HeroSec";
-import GallerySec from "Sections/Homepage/GallerySec/GallerySec";
-import FeaturesSec from "Sections/Homepage/FeaturesSec/FeaturesSec";
-import TrendsSec from "Sections/Homepage/TrendsSec/TrendsSec";
-import MapSec from "Sections/Homepage/MapSec/MapSec";
-import Footer from "Sections/Homepage/Footer/Footer";
+import HeroSec from "../../Sections/Homepage/HeroSec/HeroSec";
+import GallerySec from "../../Sections/Homepage/GallerySec/GallerySec";
+import FeatureSec from "../../Sections/Homepage/FeaturesSec/FeatureSec";
+import TrendsSec from "../../Sections/Homepage/TrendsSec/TrendsSec";
+import MapSec from "../../Sections/Homepage/MapSec/MapSec";
+import Footer from "../../Sections/Homepage/Footer/Footer";
 
 export class Homepage extends Component {
   static propTypes = {};
@@ -14,10 +14,8 @@ export class Homepage extends Component {
       <div className="homepage">
         <HeroSec />
 
-        <FeaturesSec />
-
         <GallerySec />
-
+<FeatureSec/>
 
         <TrendsSec />
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.css"; // Import the custom CSS
+import logo from "../../assets/logo.png"; // Import the logo image
 
 const NavBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);

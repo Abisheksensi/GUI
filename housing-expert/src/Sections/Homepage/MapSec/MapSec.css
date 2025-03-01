@@ -1,0 +1,37 @@
+/* MapSec.css */
+.map-container {
+  margin: 0px 120px 0px 120px; /* Top, Right, Bottom, Left as requested */
+  background-color: #5b5b5b; /* Dark grey background, matching your design (adjust if needed) */
+  padding: 24px; /* Add some internal padding for spacing */
+  border-radius: 16px; /* Match your design's rounded corners */
+  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.04); /* Optional: Match other cards' shadow */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Spacing between heading, subheading, and map */
+  width: 100%; /* Ensure it fills its parent container */
+  max-width: 1200px; /* Prevent excessive width */
+}
+
+.map-heading {
+  color: #ffffff; /* White text for contrast on dark background */
+  font-size: 32px; /* Larger heading */
+  font-weight: 700;
+  font-family: 'Satoshi', sans-serif; /* Match your project font */
+  margin: 0; /* Reset default margins */
+  text-align: left;
+}
+
+.map-subheading {
+  color: #f0f0f0; /* Light grey text for contrast */
+  font-size: 16px; /* Standard text size */
+  font-weight: 400;
+  font-family: 'Satoshi', sans-serif; /* Match your project font */
+  margin: 0; /* Reset default margins */
+  text-align: left;
+}
+
+.map {
+  height: 400px; /* Match your original map height */
+  width: 100%; /* Fill the container */
+  border-radius: 16px; /* Match container for consistency */
+}

@@ -1,0 +1,40 @@
+.homepage {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    padding-left: 128px;
+    padding-right: 128px;
+}
+
+.homepage-sections {
+  position: relative;
+  width: 100%;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* 128px gap between sections */
+.homepage-sections > * {
+  margin-bottom: 128px;
+}
+
+/* No extra margin after the last section */
+.homepage-sections > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Fixed NavBar */
+.homepage > nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 10;
+}
+
+/* Base padding */
+.homepage-sections > * {
+  padding: 40px 0;
+  position: relative;
+}

@@ -1,4 +1,63 @@
-/* TrendsSec.css */
+.header-container {
+  width: 100%;
+  height: 132px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 137px;
+}
+
+.header-title {
+  width: 658px;
+  color: #3a3a3a;
+  font-size: 47px;
+  font-weight: 700;
+  font-family: 'Satoshi', sans-serif;
+  text-transform: capitalize;
+  line-height: 66.22px;
+  text-align: left;
+}
+
+.header-description {
+  width: 445px;
+  color: #3a3a3a;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Satoshi', sans-serif;
+  line-height: normal;
+  text-align: left;
+}
+
+.trends-section {
+  margin: 0px 128px 0px 128px; /* Match your project’s margin pattern */
+  display: flex;
+  flex-direction: column;
+  gap: 48px; /* Spacing between heading, subheading, and cards */
+  width: 100%;
+  max-width: 1280px; /* Prevent excessive width */
+}
+
+.trends-heading {
+  color: #ffffff; /* White text for contrast */
+  font-size: 47px; /* Match your header-title size */
+  font-weight: 700;
+  font-family: 'Satoshi', sans-serif; /* Match your project font */
+  text-transform: capitalize;
+  line-height: 66.22px; /* Match your header-title line-height */
+  margin: 0; /* Reset default margins */
+  text-align: left;
+}
+
+.trends-subheading {
+  color: #3a3a3a; /* Match your header-description color */
+  font-size: 16px; /* Match your header-description size */
+  font-weight: 400;
+  font-family: 'Satoshi', sans-serif; /* Match your project font */
+  line-height: normal;
+  margin: 0; /* Reset default margins */
+  text-align: left;
+}
+
 .trends-container {
   height: 498px;
   display: inline-flex;

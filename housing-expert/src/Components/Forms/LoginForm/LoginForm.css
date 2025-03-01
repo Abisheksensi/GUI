@@ -1,0 +1,130 @@
+/* Import Satoshi font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700&display=swap');
+
+/* Apply Satoshi font to text elements with the 'satoshi-font' class */
+.satoshi-font {
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* Login form container styling */
+.login-form-container {
+  width: 473px;
+  height: 592px;
+  padding: 24px 28px 32px 28px; /* Equivalent to px-7 (28px), pt-6 (24px), pb-8 (32px) */
+  background-color: #ffffff; /* White background */
+  border-radius: 24px; /* Equivalent to rounded-3xl (24px) */
+  box-shadow: 0 0 34px 0 rgba(0, 0, 0, 0.11); /* Shadow from Tailwind */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px; /* Equivalent to gap-6 (24px) */
+}
+
+/* Form title styling */
+.form-title {
+  color: #424648; /* Text color */
+  font-size: 32px; /* Equivalent to text-[32px] */
+  font-weight: 700; /* Bold */
+}
+
+/* Form content styling */
+.form-content {
+  width: 100%;
+  height: 469px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 19px; /* Gap between inputs and actions */
+}
+
+/* Form inputs styling */
+.form-inputs {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px; /* Equivalent to gap-5 (20px) */
+}
+
+/* Form actions styling */
+.form-actions {
+  width: 100%;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px; /* Equivalent to gap-5 (20px) */
+}
+
+/* Get started button styling */
+.get-started-button {
+  width: 100%;
+  padding: 16px 10px; /* Equivalent to px-2.5 (10px), py-4 (16px) */
+  background-color: #501f8a; /* Purple background */
+  border-radius: 8px; /* Equivalent to rounded-lg (8px) */
+  color: #ffffff; /* White text */
+  font-size: 16px; /* Equivalent to text-base (16px) */
+  font-weight: 700; /* Bold */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-button:hover {
+  background-color: #3d1872; /* Darker purple on hover */
+}
+
+/* Or separator styling */
+.or-separator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* Equivalent to gap-2 (8px) */
+}
+
+.separator-line {
+  flex-grow: 1;
+  height: 0;
+  border: 1px solid #818a8f; /* Separator line color */
+}
+
+.or-text {
+  color: #818a8f; /* Text color */
+  font-size: 16px; /* Equivalent to text-base (16px) */
+  font-weight: 700; /* Bold */
+}
+
+/* Google button styling */
+.google-button {
+  width: 100%;
+  height: 54px;
+  padding: 16px 10px; /* Equivalent to px-2.5 (10px), py-4 (16px) */
+  background-color: #ffffff; /* White background */
+  border-radius: 8px; /* Equivalent to rounded-lg (8px) */
+  border: 1px solid #999999; /* Border color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Equivalent to gap-2.5 (10px) */
+  color: #424648; /* Text color */
+  font-size: 16px; /* Equivalent to text-base (16px) */
+  font-weight: 700; /* Bold */
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.google-button:hover {
+  border-color: #7e7e7e; /* Darker border on hover */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+/* Google icon styling */
+.google-icon {
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}

@@ -50,6 +50,11 @@ const NavBar = () => {
     { label: "Docs", icon: FileText },
   ];
 
+  // Handler for navigating to the login page
+  const handleLoginClick = () => {
+    window.location.href = "/login"; // Navigate to /login page using React DOM
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -108,7 +113,9 @@ const NavBar = () => {
         </button>
 
         {/* Login Button */}
-        <button className="login-btn hidden lg:block">Log In</button>
+        <button className="login-btn hidden lg:block" onClick={handleLoginClick}>
+          Log In
+        </button>
 
         {/* Profile Menu */}
         <div className="profile-menu">

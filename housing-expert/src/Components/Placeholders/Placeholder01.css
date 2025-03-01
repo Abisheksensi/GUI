@@ -1,0 +1,72 @@
+/* Import Satoshi font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700&display=swap');
+
+/* Apply Satoshi font to text elements with the 'satoshi-font' class */
+.satoshi-font {
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* Placeholder container styling */
+.placeholder-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px; /* Equivalent to gap-1 (8px) */
+  height: 80px; /* Equivalent to h-20 (80px) */
+}
+
+/* Label styling */
+.placeholder-label {
+  text-align: center;
+  color: #6b7280; /* Gray-600 */
+  font-size: 16px; /* Equivalent to text-base (16px) */
+  font-weight: 400; /* Normal weight */
+}
+
+/* Input wrapper styling */
+.input-wrapper {
+  width: 100%;
+  padding: 16px; /* Equivalent to p-4 (16px) */
+  background-color: #ffffff; /* White background */
+  border-radius: 8px; /* Equivalent to rounded-lg (8px) */
+  border: 1px solid #d9d9d9; /* Default border color */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px; /* Space between icon and input (equivalent to gap-2.5) */
+}
+
+/* Input field styling */
+.input-field {
+  width: 100%;
+  border: none; /* Remove default input border */
+  outline: none; /* Remove default focus outline */
+  background: transparent; /* Transparent background to match wrapper */
+  color: #b3b3b3; /* Placeholder text color */
+  font-size: 16px; /* Equivalent to text-base (16px) */
+  font-weight: 400; /* Normal weight */
+  flex-grow: 1; /* Allow input to grow and take remaining space */
+}
+
+/* Placeholder text styling (for browsers that support ::placeholder) */
+.input-field::placeholder {
+  color: #b3b3b3; /* Placeholder text color */
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Focus state for input: purple stroke and purple glow */
+.input-field:focus {
+  border: none; /* Ensure no default border */
+}
+
+.input-wrapper:focus-within {
+  border: 2px solid #9333ea; /* Purple stroke (matching Tailwind's purple-600) */
+  box-shadow: 0 0 8px rgba(147, 51, 234, 0.5); /* Subtle purple glow (purple-600 with opacity) */
+}
+
+/* Icon styling (when present) */
+.input-icon {
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}

@@ -1,27 +1,86 @@
-.feature-card {
-  width: 292px;
+/* GalleryCard.css */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.gallery-card {
+  width: 296px;
   height: 213px;
   padding: 30px;
-  background: white;
-  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.04);
   border-radius: 16px;
-  display: inline-flex;
+  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.04);
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 28px;
+  position: relative;
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Ensure glow doesn't bleed inside */
+  z-index: 1; /* Ensure card is above glow */
 }
 
-.feature-icon {
+.gallery-card:hover {
+  transform: scale(1.02);
+}
+
+.gallery-card::after,
+.gallery-card::before {
+  content: '';
+  position: absolute;
+  height: calc(100% + 20px); /* Larger than card by 20px */
+  width: calc(100% + 20px); /* Larger than card by 20px */
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Behind the card */
+  border-radius: 20px; /* Slightly larger radius to match offset */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease; /* Smooth appearance */
+}
+
+.gallery-card:hover::after,
+.gallery-card:hover::before {
+  opacity: 1; /* Show on hover */
+  animation: 3s spin linear infinite;
+}
+
+.gallery-card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5; /* This will be the base opacity, multiplied by 0 or 1 from hover */
+}
+
+.svg-wrapper {
   position: relative;
 }
 
-.feature-text {
-  align-self: stretch;
-  color: black;
+.card-title {
+  width: 100%;
   font-size: 24px;
-  font-family: "Satoshi", sans-serif;
   font-weight: 700;
+  font-family: 'Satoshi', sans-serif;
   line-height: 30.48px;
-  word-wrap: break-word;
+}
+
+/* Ensure images maintain aspect ratio */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }

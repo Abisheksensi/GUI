@@ -1,168 +1,128 @@
+/* GallerySec.css */
 .gallery-section {
-  max-width: 100%;
-  padding: 60px 120px 0px 120px; 
+  padding: 0px 128px 0px 128px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  width: 100%;
+  height: 132px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 137px;
+}
+
+.header-title {
+  width: 658px;
+  color: #3a3a3a;
+  font-size: 47px;
+  font-weight: 700;
+  font-family: 'Satoshi', sans-serif;
+  text-transform: capitalize;
+  line-height: 66.22px;
+  text-align: left;
+}
+
+.header-description {
+  width: 445px;
+  color: #3a3a3a;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Satoshi', sans-serif;
+  line-height: normal;
+  text-align: left;
 }
 
 .gallery-container {
-    max-width: 100%; /* Ensure container does not exceed screen width */
-    margin: 0 auto; /* Center the container */
-    display: flex;
-    gap: 20px; /* Space between cards and image */
-    justify-content: space-between; /* Space cards and image evenly */
-    align-items: center; /* Align items vertically */
-    overflow-x: hidden; /* Prevent horizontal scroll bar */
+  height: auto; /* Let it hug contents */
+  width: 100%;
+  display: flex; /* Changed to flex for better alignment */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
 }
 
-/* Gallery Cards Layout */
-.gallery-cards {
+.gallery-column {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Space between rows */
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1;
 }
 
 .gallery-row {
+  width: 100%;
   display: flex;
-  gap: 20px; /* Space between cards in a row */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
 }
 
-/* Style for GalleryCard */
-.gallery-card {
-  width: 280px; /* Slightly smaller to fit layout, adjust as needed */
-  height: 200px; /* Adjusted to fit layout */
-  padding: 20px;
-  background: white; /* White cards for top row */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  border-radius: 12px;
+.card {
+  width: 100%;
+  height: 152px; /* Fixed height for all cards */
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s; /* For hover effect */
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 28px;
 }
 
-.gallery-card:nth-child(3) {
-  background: #5b5b5b; /* Gray for bottom-left card */
-  color: white; /* White text for contrast */
+.card-white {
+  background-color: #ffffff;
 }
 
-.gallery-card:nth-child(4) {
-  background: #f1efed; /* Light gray for bottom-right card */
-  color: black; /* Black text for contrast */
+.card-dark {
+  background-color: #282828;
 }
 
-.gallery-card:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+.card-gray {
+  background-color: #5b5b5b;
 }
 
-/* Icon Image Styling */
-.gallery-icon {
-  width: 62px; /* Match the SVG icon size, adjust based on your icon SVGs */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 10px; /* Space between icon and text */
+.card-light {
+  background-color: #f1efed;
+}
+
+.svg-wrapper {
+  position: relative;
+}
+
+.card-title {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Satoshi', sans-serif;
+  line-height: 30.48px;
+  text-align: left;
+}
+
+.card-title-black {
+  color: #000000;
+}
+
+.card-title-white {
+  color: #ffffff;
 }
 
 .gallery-image {
-  flex-shrink: 0; /* Prevent image from shrinking */
+  border-radius: 16px;
+  width: 570px;
+  height: calc(213px * 2 + 24px); /* Height of 2 cards plus the gap between them */
+  object-fit: cover; /* Ensure image fills space */
 }
 
-/* Text Styling */
-.gallery-text {
-  color: black; /* Default text color for white/light gray cards */
-  font-size: 20px; /* Slightly smaller to fit */
-  font-family: "Satoshi", sans-serif;
-  font-weight: 700;
-  line-height: 24px;
-  word-wrap: break-word;
-  text-align: center;
-}
-
-.gallery-card:nth-child(3) .gallery-text,
-.gallery-card:nth-child(4) .gallery-text {
-  color: white; /* White text for gray cards */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .gallery-container {
-    flex-direction: column; /* Stack cards and image on tablets */
-    align-items: center;
-    gap: 30px;
-  }
-
-  .gallery-cards {
-    width: 100%;
-    max-width: 600px; /* Limit card area width */
-  }
-
-  .gallery-row {
-    justify-content: center; /* Center cards in rows on smaller screens */
-  }
-
-  .gallery-card {
-    width: 250px; /* Smaller cards on tablets */
-    height: 180px; /* Adjusted height */
-  }
-
-  .gallery-icon {
-    width: 50px; /* Smaller icons on tablets */
-  }
-
-  .gallery-text {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  .gallery-image {
-    width: 100%;
-    max-width: 500px; /* Smaller image on tablets */
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery-section {
-    padding: 20px 10px; /* Less padding on mobile */
-  }
-
-  .gallery-card {
-    width: 220px; /* Even smaller on mobile */
-    height: 160px; /* Adjusted height */
-    padding: 15px;
-  }
-
-  .gallery-icon {
-    width: 40px; /* Smaller icons on mobile */
-  }
-
-  .gallery-text {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .gallery-image {
-    max-width: 400px; /* Smaller image on mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery-row {
-    flex-direction: column; /* Stack cards vertically on very small screens */
-    align-items: center;
-  }
-
-  .gallery-card {
-    width: 100%;
-    max-width: 200px; /* Full width, limited max */
-    height: auto; /* Adjust height based on content */
-  }
-
-  .gallery-icon {
-    width: 35px; /* Smallest icons on very small screens */
-  }
-
-  .gallery-image {
-    max-width: 300px; /* Smallest image on very small screens */
-  }
+/* Ensure images maintain aspect ratio */
+img {
+  max-width: 100%;
+  height: auto;
 }

@@ -18,7 +18,7 @@ export class Homepage extends Component {
         <HeroSec />
 
         <GallerySec />
-<FeatureSec/>
+        <FeatureSec/>
 
         <TrendsSec />
 

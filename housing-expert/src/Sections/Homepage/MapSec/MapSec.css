@@ -1,6 +1,6 @@
 /* MapSec.css */
 .map-container {
-  margin: 0px 120px 0px 120px; /* Top, Right, Bottom, Left as requested */
+  margin: 0px auto; /* Center the container horizontally */
   background-color: #5b5b5b; /* Dark grey background, matching your design (adjust if needed) */
   padding: 24px; /* Add some internal padding for spacing */
   border-radius: 16px; /* Match your design's rounded corners */

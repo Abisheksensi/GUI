@@ -29,12 +29,12 @@
 }
 
 .trends-section {
-  margin: 0px 128px 0px 128px; /* Match your project’s margin pattern */
-  display: flex;
-  flex-direction: column;
-  gap: 48px; /* Spacing between heading, subheading, and cards */
-  width: 100%;
-  max-width: 1280px; /* Prevent excessive width */
+    margin: 0px auto; /* Center the section horizontally */
+    display: flex;
+    flex-direction: column;
+    gap: 48px; /* Spacing between heading, subheading, and cards */
+    width: 100%;
+    max-width: 1280px; /* Prevent excessive width */
 }
 
 .trends-heading {

@@ -8,16 +8,16 @@
 
 /* Login form container styling */
 .login-form-container {
-  width: 473px;
-  height: 592px;
-  padding: 24px 28px 32px 28px; /* Equivalent to px-7 (28px), pt-6 (24px), pb-8 (32px) */
+  width: 400px;
+  height: auto;
+  padding: 24px 56px 32px 56px; /* Equivalent to px-7 (28px), pt-6 (24px), pb-8 (32px) */
   background-color: #ffffff; /* White background */
   border-radius: 24px; /* Equivalent to rounded-3xl (24px) */
   box-shadow: 0 0 34px 0 rgba(0, 0, 0, 0.11); /* Shadow from Tailwind */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center; /* Center-align content vertically */
+  align-items: center; /* Center-align content horizontally */
   gap: 24px; /* Equivalent to gap-6 (24px) */
 }
 
@@ -26,44 +26,121 @@
   color: #424648; /* Text color */
   font-size: 32px; /* Equivalent to text-[32px] */
   font-weight: 700; /* Bold */
+  margin: 0; /* Remove default margin */
 }
 
 /* Form content styling */
 .form-content {
   width: 100%;
-  height: 469px;
+  height: 100%; /* Fill container */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   gap: 19px; /* Gap between inputs and actions */
 }
 
 /* Form inputs styling */
 .form-inputs {
   width: 100%;
-  height: 280px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 20px; /* Equivalent to gap-5 (20px) */
+  align-items: center; /* Center-align inputs */
+  gap: 20px; /* Gap between placeholders */
+}
+
+/* Input group styling */
+.input-group {
+  width: 100%; /* Ensure full width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  gap: 4px; /* Small gap between label and input */
+}
+
+/* Input label styling */
+.input-label {
+  text-align: left; /* Align labels to the left instead of center for better alignment */
+  color: #6b7280; /* Gray-600 */
+  font-size: 16px; /* Equivalent to text-base (16px) */
+  font-weight: 400; /* Normal weight */
+  width: 100%; /* Ensure labels take full width */
+}
+
+/* Input wrapper styling */
+.input-wrapper {
+  width: 100%; /* Ensure full width */
+  padding: 16px; /* Equivalent to p-4 (16px) */
+  background-color: #ffffff; /* White background */
+  border-radius: 8px; /* Equivalent to rounded-lg (8px) */
+  border: 1px solid #d9d9d9; /* Default border color */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Vertically center content */
+  gap: 10px; /* Equivalent to gap-2.5 (10px) */
+}
+
+/* Password input wrapper (with eye icon) */
+.password-wrapper {
+  justify-content: space-between; /* Space between input and eye icon */
+}
+
+/* Input field styling */
+.input-field {
+  width: 100%; /* Ensure full width within the wrapper */
+  height: 100%; /* Ensure input fills the wrapper height */
+  border: none; /* Remove default input border */
+  outline: none; /* Remove default focus outline */
+  background: transparent; /* Transparent background to match wrapper */
+  color: #b3b3b3; /* Placeholder text color */
+  font-size: 16px; /* Equivalent to text-base (16px) */
+  font-weight: 400; /* Normal weight */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+/* Placeholder text styling (for browsers that support ::placeholder) */
+.input-field::placeholder {
+  color: #b3b3b3; /* Placeholder text color */
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Focus state for input: purple stroke and purple glow */
+.input-field:focus {
+  border: none; /* Ensure no default border */
+}
+
+.input-wrapper:focus-within {
+  border: 2px solid #be78ff; /* Purple stroke (matching Tailwind's purple-600) */
+  box-shadow: 0 0 8px rgba(239, 222, 254, 0.5); /* Subtle purple glow (purple-600 with opacity) */
+}
+
+/* Eye icon wrapper styling (for password field) */
+.eye-icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* Form actions styling */
 .form-actions {
   width: 100%;
-  height: 170px;
+  height: 100%; /* Fill container */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 20px; /* Equivalent to gap-5 (20px) */
+  gap: 20px; /* Gap between buttons and separator */
+  margin-top: 24px; /* Add gap between placeholders and buttons (24px) */
 }
 
 /* Get started button styling */
 .get-started-button {
   width: 100%;
+  height: 100%; /* Fill container */
   padding: 16px 10px; /* Equivalent to px-2.5 (10px), py-4 (16px) */
   background-color: #501f8a; /* Purple background */
   border-radius: 8px; /* Equivalent to rounded-lg (8px) */
@@ -100,8 +177,8 @@
   font-weight: 700; /* Bold */
 }
 
-/* Google button styling */
-.google-button {
+/* Facebook button styling */
+.facebook-button {
   width: 100%;
   height: 54px;
   padding: 16px 10px; /* Equivalent to px-2.5 (10px), py-4 (16px) */
@@ -119,12 +196,12 @@
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.google-button:hover {
+.facebook-button:hover {
   border-color: #7e7e7e; /* Darker border on hover */
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
 }
 
-/* Google icon styling */
-.google-icon {
+/* Facebook icon styling */
+.facebook-icon {
   flex-shrink: 0; /* Prevent icon from shrinking */
 }

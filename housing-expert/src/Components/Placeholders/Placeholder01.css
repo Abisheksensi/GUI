@@ -8,12 +8,13 @@
 
 /* Placeholder container styling */
 .placeholder-container {
+  width:100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 8px; /* Equivalent to gap-1 (8px) */
-  height: 80px; /* Equivalent to h-20 (80px) */
+  height: 100%; /* Fill the container */
 }
 
 /* Label styling */

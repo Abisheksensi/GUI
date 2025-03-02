@@ -1,0 +1,54 @@
+/* LoginPage.css */
+
+/* Import Satoshi font from Google Fonts (optional, if needed to match LoginForm styling) */
+@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700&display=swap');
+
+body,html{
+    margin : 0;
+    padding: 0 ;
+}
+
+.login-page {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    width:100%;
+}
+
+
+.login-design {
+  z-index: -1;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.login-design-image {
+  width: 100%; /* Ensure the image spans the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Scale the image to cover the container while maintaining aspect ratio */
+  object-position: bottom; /* Position the image from the bottom to align with the wave design */
+}
+
+.login-content {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 480px) {
+  .login-design-image {
+    max-width: 100%; /* Ensure image doesn’t exceed container width on mobile */
+    height: auto; /* Maintain aspect ratio on mobile */
+  }
+}

@@ -1,6 +1,5 @@
 /* GallerySec.css */
 .gallery-section {
-  padding: 0px 128px 0px 128px;
   display: flex;
   flex-direction: column;
   gap: 48px;

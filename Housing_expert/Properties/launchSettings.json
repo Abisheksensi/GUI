@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Housing_expert (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Housing_expert (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

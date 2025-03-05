@@ -1,0 +1,232 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Project New - Copy\\Housing_expert\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\agentselection.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\agentselection.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\propertiesselection.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\propertiesselection.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\propertiesselection.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\propertiesselection.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\agentselection.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\agentselection.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|d:\\project new - copy\\housing_expert\\housing_expert\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D01775C-3E0C-4FFE-BBF8-C46D8BC4D295}|Housing_expert\\Housing_expert.csproj|solutionrelative:housing_expert\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PropertiesSelection.xaml",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\PropertiesSelection.xaml",
+              "RelativeDocumentMoniker": "Housing_expert\\PropertiesSelection.xaml",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\PropertiesSelection.xaml",
+              "RelativeToolTip": "Housing_expert\\PropertiesSelection.xaml",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAIwLQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T18:14:37.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PropertiesSelection.xaml.cs",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\PropertiesSelection.xaml.cs",
+              "RelativeDocumentMoniker": "Housing_expert\\PropertiesSelection.xaml.cs",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\PropertiesSelection.xaml.cs",
+              "RelativeToolTip": "Housing_expert\\PropertiesSelection.xaml.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwBQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T18:36:47.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AgentSelection.xaml",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\AgentSelection.xaml",
+              "RelativeDocumentMoniker": "Housing_expert\\AgentSelection.xaml",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\AgentSelection.xaml",
+              "RelativeToolTip": "Housing_expert\\AgentSelection.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T18:14:14.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Homepage.xaml.cs",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\Homepage.xaml.cs",
+              "RelativeDocumentMoniker": "Housing_expert\\Homepage.xaml.cs",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\Homepage.xaml.cs",
+              "RelativeToolTip": "Housing_expert\\Homepage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T18:13:45.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Homepage.xaml",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\Homepage.xaml",
+              "RelativeDocumentMoniker": "Housing_expert\\Homepage.xaml",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\Homepage.xaml",
+              "RelativeToolTip": "Housing_expert\\Homepage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T18:13:30.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "Housing_expert\\Login.xaml.cs",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\Login.xaml.cs",
+              "RelativeToolTip": "Housing_expert\\Login.xaml.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAYwGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T14:55:00.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SignUp.xaml",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\SignUp.xaml",
+              "RelativeDocumentMoniker": "Housing_expert\\SignUp.xaml",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\SignUp.xaml",
+              "RelativeToolTip": "Housing_expert\\SignUp.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T14:40:24.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SignUp.xaml.cs",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\SignUp.xaml.cs",
+              "RelativeDocumentMoniker": "Housing_expert\\SignUp.xaml.cs",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\SignUp.xaml.cs",
+              "RelativeToolTip": "Housing_expert\\SignUp.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T14:40:42.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\Login.xaml",
+              "RelativeDocumentMoniker": "Housing_expert\\Login.xaml",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\Login.xaml",
+              "RelativeToolTip": "Housing_expert\\Login.xaml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T12:38:28.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AgentSelection.xaml.cs",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\AgentSelection.xaml.cs",
+              "RelativeDocumentMoniker": "Housing_expert\\AgentSelection.xaml.cs",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\AgentSelection.xaml.cs",
+              "RelativeToolTip": "Housing_expert\\AgentSelection.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T18:37:31.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Housing_expert\\MainWindow.xaml",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\MainWindow.xaml",
+              "RelativeToolTip": "Housing_expert\\MainWindow.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T12:30:53.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Housing_expert\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Housing_expert\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T12:38:55.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\User.cs",
+              "RelativeDocumentMoniker": "Housing_expert\\User.cs",
+              "ToolTip": "D:\\Project New - Copy\\Housing_expert\\Housing_expert\\User.cs",
+              "RelativeToolTip": "Housing_expert\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T15:20:41.517Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

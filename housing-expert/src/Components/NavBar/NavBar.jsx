@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./NavBar.css"; // Import the updated custom CSS
+import "./NavBar.css";
 import logo from "../../assets/Logo/logo.png";
-// Import Lucide Icons
-import { Home, Box, FileText } from "lucide-react";
+import { Home, Users, Box, FileText } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
 
@@ -17,54 +18,51 @@ const NavBar = () => {
 
   const navListItems = [
     { label: "Properties", icon: Home },
+    { label: "Agents", icon: Users }, // Added Agents button with Users icon
     { label: "Blocks", icon: Box },
     { label: "Docs", icon: FileText },
   ];
 
-  // Handler for navigating to the login page
-  const handleLoginClick = () => {
-    window.location.href = "/login"; // Navigate to /login page using React DOM
+  const handleNavigation = (label) => {
+    if (label === "Properties") {
+      navigate('/properties');
+    } else if (label === "Agents") {
+      navigate('/agents'); // Navigate to AgentsPage
+    } else if (label === "Login") {
+      navigate('/login');
+    }
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <button className="navbar-brand" onClick={() => window.location.href = "/"}>
+        <a onClick={() => navigate('/')} className="navbar-brand">
           <img src={logo} alt="Material Tailwind Logo" className="navbar-logo" />
-        </button>
-        {/* Adding a small spacer div for the gap */}
+        </a>
         <div className="w-4"></div>
 
-        {/* Desktop Nav List */}
         <div className="nav-list hidden lg:flex">
-          {/* Other Nav Items */}
           {navListItems.map(({ label, icon: Icon }) => (
-            <a key={label} href={label === "Properties" ? "/properties" : "/"} className="nav-item">
+            <a key={label} onClick={() => handleNavigation(label)} className="nav-item">
               <Icon size={18} className="icon" /> {label}
             </a>
           ))}
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="mobile-toggle lg:hidden"
-          onClick={toggleIsNavOpen}
-        >
+        <button className="mobile-toggle lg:hidden" onClick={toggleIsNavOpen}>
           ≡
         </button>
 
-        {/* Login Button */}
-        <button className="login-btn hidden lg:block" onClick={handleLoginClick}>
+        <button className="login-btn hidden lg:block" onClick={() => handleNavigation("Login")}>
           Log In
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {isNavOpen && (
         <div className="mobile-nav lg:hidden">
           <div className="nav-list">
             {navListItems.map(({ label, icon: Icon }) => (
-              <a key={label} href={label === "Properties" ? "/properties" : "/"} className="nav-item">
+              <a key={label} onClick={() => handleNavigation(label)} className="nav-item">
                 <Icon size={18} className="icon" /> {label}
               </a>
             ))}

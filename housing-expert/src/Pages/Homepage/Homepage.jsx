@@ -5,7 +5,6 @@ import FeatureSec from "../../Sections/Homepage/FeaturesSec/FeatureSec";
 import TrendsSec from "../../Sections/Homepage/TrendsSec/TrendsSec";
 import MapSec from "../../Sections/Homepage/MapSec/MapSec";
 import Footer from "../../Sections/Homepage/Footer/Footer";
-import NavBar from "../../Components/NavBar/NavBar";
 import './Homepage.css';
 
 export class Homepage extends Component {
@@ -84,7 +83,6 @@ export class Homepage extends Component {
   render() {
     return (
       <div className="homepage">
-        <NavBar />
         <div className="homepage-sections" ref={this.contentRef}>
           <HeroSec />
           <GallerySec />

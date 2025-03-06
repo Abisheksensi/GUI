@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Eye } from "lucide-react";
-import "./LoginForm.css";
+import "./SignInForm.css";
 import { useNavigate } from 'react-router-dom';
 
-const LoginForm = () => {
+const SignInForm = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     password: ''
   });
@@ -18,10 +17,10 @@ const LoginForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSignup = async (e) => {
+  const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/signup', {
+      const response = await fetch('http://localhost:5000/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,7 +31,7 @@ const LoginForm = () => {
       if (response.ok) {
         setSuccess(data.message);
         setError('');
-        setTimeout(() => navigate('/'), 2000); // Redirect to Homepage after success
+        setTimeout(() => navigate('/'), 2000); // Redirect to Homepage after login
       } else {
         setError(data.error);
         setSuccess('');
@@ -43,30 +42,17 @@ const LoginForm = () => {
     }
   };
 
-  const handleSignIn = () => {
-    navigate('/sign-in');
+  const handleSignUp = () => {
+    navigate('/login');
   };
 
   return (
-    <div className="login-form-container">
-      <h1 className="form-title satoshi-font">Create an Account</h1>
+    <div className="sign-in-form-container">
+      <h1 className="form-title satoshi-font">Sign In</h1>
       {error && <p className="error-message satoshi-font">{error}</p>}
       {success && <p className="success-message satoshi-font">{success}</p>}
       <div className="form-content">
         <div className="form-inputs">
-          <div className="input-group">
-            <label className="input-label satoshi-font">Name</label>
-            <div className="input-wrapper">
-              <input
-                type="text"
-                name="name"
-                className="input-field satoshi-font"
-                placeholder="Enter Your Name"
-                value={formData.name}
-                onChange={handleInputChange}
-              />
-            </div>
-          </div>
           <div className="input-group">
             <label className="input-label satoshi-font">Email</label>
             <div className="input-wrapper">
@@ -98,14 +84,14 @@ const LoginForm = () => {
           </div>
         </div>
         <div className="form-actions">
-          <button className="get-started-button satoshi-font" onClick={handleSignup}>Get started</button>
+          <button className="sign-in-button satoshi-font" onClick={handleSignIn}>Sign In</button>
           <div className="or-separator">
             <div className="separator-line"></div>
             <span className="or-text satoshi-font">Or</span>
             <div className="separator-line"></div>
           </div>
-          <button className="facebook-button satoshi-font" onClick={handleSignIn}>
-            Sign In
+          <button className="facebook-button satoshi-font" onClick={handleSignUp}>
+            Sign Up
           </button>
         </div>
       </div>
@@ -113,4 +99,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SignInForm;

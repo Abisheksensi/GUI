@@ -1,17 +1,18 @@
 import React from 'react';
+import './PropertyCard.css';
 
 const PropertyCard = ({ title, propertyType, location, price, ratings, facilities, images }) => {
   return (
     <div className="property-card">
       <div className="property-image">
         <img src={images[0] || 'https://via.placeholder.com/300x200'} alt={title} />
+        <div className="rating-badge">{ratings} ★</div>
       </div>
       <div className="property-details">
         <h3>{title}</h3>
-        <p><strong>Type:</strong> {propertyType}</p>
-        <p><strong>Location:</strong> {location}</p>
-        <p><strong>Price:</strong> ${price}</p>
-        <p><strong>Rating:</strong> {ratings} ★</p>
+        <p className="property-type">{propertyType}</p>
+        <p className="location">{location}</p>
+        <p className="price">${price}</p>
         <div className="facilities">
           <strong>Facilities:</strong>
           <ul>
@@ -22,6 +23,7 @@ const PropertyCard = ({ title, propertyType, location, price, ratings, facilitie
             )}
           </ul>
         </div>
+        <button className="view-details-btn">View Details</button>
       </div>
     </div>
   );

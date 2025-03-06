@@ -1,0 +1,89 @@
+.properties-page {
+  font-family: 'Satoshi', sans-serif;
+  color: #333;
+}
+
+.hero-section2 {
+  background: linear-gradient(135deg, #5A2C91, #E113EE);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin: 10px 0 0;
+}
+
+.properties-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.properties-container h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.property-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.property-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-details {
+  padding: 20px;
+}
+
+.property-details h3 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.property-details p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.facilities {
+  margin-top: 10px;
+}
+
+.facilities ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0;
+}
+
+.facilities li {
+  font-size: 14px;
+  color: #666;
+}

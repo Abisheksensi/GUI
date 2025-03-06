@@ -1,92 +1,115 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full viewport height for a hero section */
-  background-size: cover; /* Ensures the image covers the section */
-  background-position: center; /* Centers the image horizontally and vertically */
-  background-repeat: no-repeat; /* Prevents image repetition */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* May clip absolute elements—consider removing or adjusting */
+  overflow: visible; /* Prevent clipping of absolute elements */
 }
 
 .hero-image {
-  display: block;
   width: 70%;
-  height: 100vh; /* Full viewport height for a hero section */
-  object-fit: cover; /* Ensures the image covers the section while maintaining aspect ratio */
+  height: 100vh;
+  object-fit: cover;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centers the image exactly in the middle of its container */
-  z-index: 1; /* Below other content if needed */
+  transform: translate(-50%, -50%); /* Center the house image */
+  z-index: 1; /* House PNG at z-index 1 */
 }
 
 .hero-text {
   position: absolute;
-  top: 50%;
+  top: 5%; /* Position at the top, above the house image */
   left: 50%;
-  transform: translate(-50%, -200%); /* Center the text on the image */
-  z-index: 2; /* Above the background */
-  display: inline-flex;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 2; /* Text above the house PNG */
+  display: flex;
   align-items: center;
-  width: 120%;
-  text-align: center; /* Ensure text stays centered */
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .hero-part1 {
-  color: #2d2d2d; /* Dark gray */
-  font-size: 140px;
+  color: #2d2d2d;
+  font-size: 108px;
   font-family: "Satoshi", sans-serif;
   font-weight: 700;
-  word-wrap: break-word;
 }
 
 .hero-part2 {
-  color: #8136e7; /* Purple */
-  font-size: 120px;
+  color: #8136e7;
+  font-size: 108px;
   font-family: "Satoshi", sans-serif;
   font-weight: 700;
-  word-wrap: break-word;
 }
 
-/* Position HeroCard (PropertyCard) in bottom-right corner */
-.hero-card {
+/* Position HeroCard in bottom-right corner */
+.property-card {
   position: absolute;
-  bottom: 6rem; /* Distance from bottom */
-  right: 2rem; /* Distance from right */
-  z-index: 3; /* Above text and background */
-  /* Ensure the card is visible by removing any constraints from parent */
+  bottom: 9rem;
+  right: -5em; /* Changed from left to right */
+  z-index: 3; /* Above both the house PNG and text */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-section {
-    height: 80vh; /* Shorter on mobile */
+    height: 80vh;
   }
 
   .hero-text {
-    top: 40%; /* Adjust position on mobile for better visibility */
+    top: 5%; /* Slightly closer to the top on smaller screens */
   }
 
   .hero-part1, .hero-part2 {
-    font-size: 48px; /* Smaller text on tablets and mobile */
+    font-size: 48px;
   }
 
-  .hero-card {
-    bottom: 1rem; /* Closer to bottom on mobile */
-    right: 1rem; /* Closer to right on mobile */
+  .property-card {
+    bottom: 1rem;
+    right: 1rem; /* Adjusted for smaller screens */
+    width: 300px; /* Reduce width on smaller screens */
+    height: auto;
+    padding: 12px;
+  }
+
+  .property-title {
+    font-size: 20px;
+  }
+
+  .property-description {
+    font-size: 14px;
+  }
+
+  .puzzle-icon {
+    width: 64px;
+    height: 64px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-part1, .hero-part2 {
-    font-size: 36px; /* Even smaller on very small screens */
+    font-size: 36px;
   }
 
-  .hero-card {
-    bottom: 0.5rem; /* Even closer on very small screens */
-    right: 0.5rem; /* Even closer on very small screens */
+  .property-card {
+    bottom: 0.5rem;
+    right: 0.5rem; /* Adjusted for very small screens */
+    width: 250px; /* Further reduce width on very small screens */
+    padding: 10px;
+  }
+
+  .property-title {
+    font-size: 18px;
+  }
+
+  .property-description {
+    font-size: 12px;
+  }
+
+  .puzzle-icon {
+    width: 48px;
+    height: 48px;
   }
 }

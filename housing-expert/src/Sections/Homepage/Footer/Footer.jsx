@@ -1,5 +1,6 @@
 import React from "react";
-import './Footer.css'
+import './Footer.css';
+import logo from "../../../assets/Logo/logo.png";
 
 const LINKS = [
   {
@@ -23,17 +24,16 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="footer-content">
         <div className="footer-top">
-          <h1 className="footer-title satoshi-font">Material Tailwind</h1>
+          <div className="footer-brand">
+            <img src={logo} alt="Housing Expert Logo" className="footer-logo" />
+          </div>
           <div className="footer-links">
             {LINKS.map(({ title, items }) => (
               <ul key={title} className="footer-list">
                 <p className="footer-list-title satoshi-font">{title}</p>
                 {items.map((link) => (
                   <li key={link}>
-                    <a
-                      href="#"
-                      className="footer-list-item satoshi-font"
-                    >
+                    <a href="#" className="footer-list-item satoshi-font">
                       {link}
                     </a>
                   </li>
@@ -44,25 +44,15 @@ const Footer = () => {
         </div>
         <div className="footer-bottom">
           <p className="footer-copyright satoshi-font">
-            © {currentYear} <a href="https://material-tailwind.com/">Material Tailwind</a>. All
-            Rights Reserved.
+            © {currentYear} Housing Expert. All Rights Reserved.
           </p>
-          <div className="footer-social">
-            <a href="#" className="social-icon">
-            </a>
-            <a href="#" className="social-icon">
-            </a>
-            <a href="#" className="social-icon">
-            </a>
-            <a href="#" className="social-icon">
-            </a>
-            <a href="#" className="social-icon">
-            </a>
-          </div>
+          <p className="footer-design-credit satoshi-font">
+            Designed by Abishek Jayathilake
+          </p>
         </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

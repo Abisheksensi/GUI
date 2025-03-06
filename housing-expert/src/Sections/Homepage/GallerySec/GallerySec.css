@@ -2,7 +2,7 @@
 .gallery-section {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 56px;
   justify-content: center;
   align-items: center;
 }

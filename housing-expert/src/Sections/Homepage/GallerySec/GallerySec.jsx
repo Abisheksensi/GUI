@@ -1,6 +1,6 @@
-// GallerySec.jsx
 import React from 'react';
 import './GallerySec.css';
+import Home02 from "../../../assets/images/Home02.png";
 import GalleryCard from '../../../Components/Cards/GalleryCard/GalleryCard';
 import box_icon from "../../../assets/Icons/box_icon.svg";
 import bulb_icon from "../../../assets/Icons/bulb_icon.svg";
@@ -25,11 +25,13 @@ const GallerySec = () => {
               icon={wizard_icon}
               text="Personalized Recommendations"
               backgroundColor="#ffffff"
+              textColor="#3a3a3a" /* Dark gray for white background */
             />
             <GalleryCard 
               icon={box_icon}
               text="Virtual Tours at Your Fingertips"
               backgroundColor="#282828"
+              textColor="#ffffff" /* White for dark background */
             />
           </div>
           <div className="gallery-row">
@@ -37,15 +39,17 @@ const GallerySec = () => {
               icon={bulb_icon}
               text="Intelligent Pricing Insights"
               backgroundColor="#5b5b5b"
+              textColor="#ffffff" /* White for medium gray background */
             />
             <GalleryCard 
               icon={star_icon}
               text="Seamless User Experience"
               backgroundColor="#f1efed"
+              textColor="#3a3a3a" /* Dark gray for light background */
             />
           </div>
         </div>
-        <img className="gallery-image" src="https://placehold.co/608x450" alt="Gallery placeholder" />
+        <img className="gallery-image" src={Home02} alt="Gallery Home" />
       </div>
     </div>
   );

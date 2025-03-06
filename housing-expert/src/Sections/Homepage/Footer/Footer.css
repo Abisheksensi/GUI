@@ -10,6 +10,9 @@
 .footer-container {
   width: 100%;
   position: relative;
+  background-color: #f8f9fa; /* Light background for consistency */
+  padding: 48px 0; /* Add padding to the footer */
+  margin-top: 48px; /* Ensure space above the footer */
 }
 
 .footer-content {
@@ -21,7 +24,7 @@
 .footer-top {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 32px;
   justify-content: space-between;
   padding-bottom: 48px; /* Space before the border */
 }
@@ -32,16 +35,20 @@
   }
 }
 
-.footer-title {
-  margin-bottom: 24px; /* Equivalent to mb-6 (24px) */
-  font-size: 1.5rem; /* Approximate h5 size */
-  font-weight: 700; /* Bold for title */
+.footer-brand {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 40px; /* Adjust based on your logo's dimensions */
+  width: auto;
 }
 
 .footer-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 24px;
   justify-content: space-between;
 }
 
@@ -51,36 +58,36 @@
 }
 
 .footer-list-title {
-  margin-bottom: 12px; /* Equivalent to mb-3 (12px) */
-  font-weight: 500; /* Medium weight for titles */
-  opacity: 0.4;
-  color: #023e8a; /* Blue-gray color (matching material-tailwind's blue-gray) */
-  font-size: 0.875rem; /* Approximate small text size */
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #3a3a3a;
+  font-size: 16px;
 }
 
 .footer-list-item {
-  padding: 6px 0; /* Equivalent to py-1.5 (6px top/bottom) */
-  font-weight: 400; /* Normal weight for items */
-  color: #718096; /* Gray color (matching material-tailwind's gray) */
-  font-size: 0.875rem; /* Approximate small text size */
-  display: block; /* Ensure it behaves like a link */
-  text-decoration: none; /* Remove default underline */
+  padding: 6px 0;
+  font-weight: 400;
+  color: #898989;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-list-item:hover {
-  color: #1a202c; /* Darker blue-gray for hover (matching material-tailwind's blue-gray-900) */
-  text-decoration: underline; /* Add underline on hover for accessibility */
+  color: #5A2C91;
+  text-decoration: underline;
 }
 
 .footer-bottom {
-  margin-top: 48px; /* Equivalent to mt-12 (48px) */
+  margin-top: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #e2e8f0; /* Light border color (matching material-tailwind's blue-gray-50) */
-  padding: 16px 0; /* Equivalent to py-4 (16px top/bottom) */
+  border-top: 1px solid #e2e8f0;
+  padding: 16px 0;
+  min-height: 60px; /* Ensure enough height for copyright and design credit */
 }
 
 @media (min-width: 768px) {
@@ -91,36 +98,26 @@
 }
 
 .footer-copyright {
-  margin-bottom: 16px; /* Equivalent to mb-4 (16px) */
+  margin-bottom: 8px;
   text-align: center;
-  font-weight: 400; /* Normal weight for copyright */
-  color: #1a202c; /* Dark text color (matching material-tailwind's blue-gray-900) */
-  font-size: 0.875rem; /* Approximate small text size */
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 14px;
+}
+
+.footer-design-credit {
+  text-align: center;
+  font-weight: 400;
+  color: #898989;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
   .footer-copyright {
-    margin-bottom: 0; /* Remove margin on medium screens and up */
+    margin-bottom: 0;
   }
-}
 
-.footer-social {
-  display: flex;
-  gap: 16px; /* Equivalent to gap-4 (16px) */
-  color: #1a202c; /* Dark text color (matching material-tailwind's blue-gray-900) */
-}
-
-.social-icon {
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-.social-icon:hover {
-  opacity: 1;
-}
-
-/* Ensure icons are sized correctly (Lucid icons use size prop, but we can adjust container if needed) */
-.social-icon svg {
-  height: 20px; /* Equivalent to h-5 (20px) */
-  width: 20px; /* Equivalent to w-5 (20px) */
+  .footer-design-credit {
+    margin-bottom: 0;
+  }
 }

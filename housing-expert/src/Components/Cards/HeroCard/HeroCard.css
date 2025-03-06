@@ -1,46 +1,141 @@
-.property-card {
-  width: 524px;
-  height: 145px;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-  box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.04);
-  border-radius: 16px;
-  border: 2px solid white;
-  backdrop-filter: blur(10px);
-  display: inline-flex;
-  justify-content: flex-start;
+/* Import Satoshi font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700&display=swap');
+
+/* Root container with unique class name */
+.herocardcalass {
+  width: 550px;
+  padding: 24px;
+  background: #ffffff; /* Solid white background */
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
   align-items: center;
-  gap: 16px;
-  z-index: 3; /* Ensure the card is above other elements */
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10; /* Ensure it is on top */
 }
 
-.puzzle-icon {
-  width: 96px;
-  height: 96px;
-  object-fit: contain; /* Ensure the icon scales correctly */
+/* Gradient border effect on hover */
+.hero-card-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  border: 2px solid transparent;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.property-content {
+.hero-card-wrapper:hover::before {
+  opacity: 1;
+}
+
+.hero-card-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon container */
+.hero-card-icon-container {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Puzzle icon */
+.hero-card-puzzle {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+/* Text section */
+.hero-card-text-section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 9px;
+  gap: 10px;
 }
 
-.property-title {
-  align-self: stretch;
-  color: #656e73;
-  font-size: 24px;
+/* Title */
+.hero-card-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3a3a3a; /* Consistent with other sections */
   font-family: "Satoshi", sans-serif;
-  font-weight: 900;
+  line-height: 1.2;
+  margin: 0;
 }
 
-.property-description {
-  align-self: stretch;
-  color: #656e73;
-  font-size: 18px;
-  font-family: "Satoshi", sans-serif;
+/* Description */
+.hero-card-text {
+  font-size: 16px;
   font-weight: 400;
+  color: #818a8f; /* Consistent with other sections */
+  font-family: "Satoshi", sans-serif;
+  line-height: 1.5;
+  margin: 0;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-card-wrapper {
+    width: 340px;
+    padding: 18px;
+  }
+
+  .hero-card-icon-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .hero-card-puzzle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-card-heading {
+    font-size: 24px;
+  }
+
+  .hero-card-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-card-wrapper {
+    width: 280px;
+    padding: 14px;
+  }
+
+  .hero-card-icon-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hero-card-puzzle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-card-heading {
+    font-size: 20px;
+  }
+
+  .hero-card-text {
+    font-size: 12px;
+  }
+}
+

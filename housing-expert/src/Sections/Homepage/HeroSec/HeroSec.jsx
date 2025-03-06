@@ -12,7 +12,7 @@ const HeroSec = () => {
         <span style={{ color: "#ffffff" }}> " " </span>
         <span className="hero-part2"> AI</span>
       </div>
-      <HeroCard className="property-card" />
+      <HeroCard className="property-cardh" />
     </div>
   );
 };

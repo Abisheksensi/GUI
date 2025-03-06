@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Properties.css';
 import PropertyCard from '../../Components/Cards/PropertyCard/PropertyCard';
 
+
 const Properties = () => {
   const [properties, setProperties] = useState([]);
   const [filteredProperties, setFilteredProperties] = useState([]);

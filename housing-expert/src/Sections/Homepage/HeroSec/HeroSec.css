@@ -45,9 +45,9 @@
 }
 
 /* Position HeroCard in bottom-right corner */
-.property-card {
+.property-cardh {
   position: absolute;
-  bottom: 9rem;
+  bottom: 3rem;
   right: -5em; /* Changed from left to right */
   z-index: 3; /* Above both the house PNG and text */
 }

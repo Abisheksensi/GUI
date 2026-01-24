@@ -48,7 +48,7 @@ const SignInForm = () => {
 
   return (
     <div className="sign-in-form-container">
-      <h1 className="form-title satoshi-font">Sign In</h1>
+      <h1 className="form-title satoshi-font">Sign In Now</h1>
       {error && <p className="error-message satoshi-font">{error}</p>}
       {success && <p className="success-message satoshi-font">{success}</p>}
       <div className="form-content">
@@ -84,7 +84,7 @@ const SignInForm = () => {
           </div>
         </div>
         <div className="form-actions">
-          <button className="sign-in-button satoshi-font" onClick={handleSignIn}>Sign In</button>
+          <button className="sign-in-button satoshi-font" onClick={handleSignIn}>Sign In Now</button>
           <div className="or-separator">
             <div className="separator-line"></div>
             <span className="or-text satoshi-font">Or</span>

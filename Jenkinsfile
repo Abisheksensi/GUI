@@ -30,7 +30,8 @@ pipeline {
                 script {
                     echo 'Building Backend...'
                     // Build from local workspace - ensures correct folder usage
-                    sh "docker build --no-cache -t gui-backend housing-expert/backend"
+                    // Git has this folder as 'Backend' (uppercase), so we must match it for Linux
+                    sh "docker build --no-cache -t gui-backend housing-expert/Backend"
                 }
             }
         }

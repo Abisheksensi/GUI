@@ -34,14 +34,39 @@ pipeline {
                 }
             }
         }
+        stage('Provision Infrastructure') {
+            steps {
+                script {
+                    echo 'Provisioning AWS Infrastructure with Terraform...'
+                    // Ensure Terraform is installed in Jenkins or available
+                    // For now, we assume Jenkins has access or we use a Docker agent for Tools
+                    dir('terraform') {
+                        sh 'terraform init'
+                        sh 'terraform plan -out=tfplan' 
+                        sh 'terraform apply -auto-approve tfplan' 
+                    }
+                }
+            }
+        }
+
+        stage('Configure Servers') {
+            steps {
+                script {
+                    echo 'Configuring Servers with Ansible...'
+                    dir('ansible') {
+                         // sh 'ansible-playbook -i inventory.ini playbook.yml' // Uncomment when ready
+                    }
+                }
+            }
+        }
     }
     
     post {
         success {
-            echo 'Build Successful! Docker images created.'
+            echo 'Pipeline Executed Successfully.'
         }
         failure {
-            echo 'Build Failed.'
+            echo 'Pipeline Failed.'
         }
     }
 }

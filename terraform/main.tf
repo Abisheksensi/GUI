@@ -20,7 +20,18 @@ resource "aws_subnet" "public_subnet" {
   availability_zone       = "us-east-1a"
 
   tags = {
-    Name = "housing-public-subnet"
+    Name = "housing-public-subnet-1"
+  }
+}
+
+resource "aws_subnet" "public_subnet_2" {
+  vpc_id                  = aws_vpc.housing_vpc.id
+  cidr_block              = "10.0.2.0/24"
+  map_public_ip_on_launch = true
+  availability_zone       = "us-east-1b"
+
+  tags = {
+    Name = "housing-public-subnet-2"
   }
 }
 
@@ -47,6 +58,11 @@ resource "aws_route_table" "public_rt" {
 
 resource "aws_route_table_association" "public_assoc" {
   subnet_id      = aws_subnet.public_subnet.id
+  route_table_id = aws_route_table.public_rt.id
+}
+
+resource "aws_route_table_association" "public_assoc_2" {
+  subnet_id      = aws_subnet.public_subnet_2.id
   route_table_id = aws_route_table.public_rt.id
 }
 
@@ -79,8 +95,7 @@ resource "aws_eks_cluster" "housing_cluster" {
   role_arn = aws_iam_role.eks_cluster_role.arn
 
   vpc_config {
-    subnet_ids = [aws_subnet.public_subnet.id]
-    # In production, use private subnets too and at least 2 AZs
+    subnet_ids = [aws_subnet.public_subnet.id, aws_subnet.public_subnet_2.id]
   }
 
   depends_on = [
@@ -91,7 +106,7 @@ resource "aws_eks_cluster" "housing_cluster" {
 # --- EC2 Instance (For Ansible Configuration) ---
 resource "aws_instance" "ansible_target" {
   ami           = "ami-0c7217cdde317cfec" # Ubuntu 22.04 LTS (us-east-1)
-  instance_type = "t2.micro"
+  instance_type = "t3.micro" # Switched to t3.micro to avoid t2 issues
   subnet_id     = aws_subnet.public_subnet.id
   
   key_name = "housing-key-pair" # User must create this key pair manually or we can resource it

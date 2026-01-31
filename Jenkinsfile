@@ -19,8 +19,8 @@ pipeline {
             steps {
                 script {
                     echo 'Building Frontend...'
-                    // We use the same command we tested earlier
-                    sh "docker build --no-cache -t gui-frontend ${REPO_URL}#main:housing-expert/frontend"
+                    // Build from local workspace instead of cloning again
+                    sh "docker build --no-cache -t gui-frontend housing-expert/frontend"
                 }
             }
         }
@@ -29,8 +29,8 @@ pipeline {
             steps {
                 script {
                     echo 'Building Backend...'
-                    // Note usage of 'Backend' (uppercase) as discovered
-                    sh "docker build --no-cache -t gui-backend ${REPO_URL}#main:housing-expert/Backend"
+                    // Build from local workspace - ensures correct folder usage
+                    sh "docker build --no-cache -t gui-backend housing-expert/backend"
                 }
             }
         }

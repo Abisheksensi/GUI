@@ -20,7 +20,7 @@ pipeline {
                 script {
                     echo 'Building Frontend...'
                     // Build from local workspace instead of cloning again
-                    sh "docker build --no-cache -t gui-frontend housing-expert/frontend"
+                    sh "docker build --platform linux/amd64 --no-cache -t gui-frontend housing-expert/frontend"
                 }
             }
         }
@@ -31,7 +31,7 @@ pipeline {
                     echo 'Building Backend...'
                     // Build from local workspace - ensures correct folder usage
                     // Git has this folder as 'Backend' (uppercase), so we must match it for Linux
-                    sh "docker build --no-cache -t gui-backend housing-expert/Backend"
+                    sh "docker build --platform linux/amd64 --no-cache -t gui-backend housing-expert/Backend"
                 }
             }
         }

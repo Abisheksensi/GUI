@@ -54,8 +54,26 @@ pipeline {
             steps {
                 script {
                     echo 'Pushing Docker Images to Docker Hub...'
-                    withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
-                        sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
+                    // Fallback: Use Environment variables DOCKER_USERNAME and DOCKER_PASSWORD directly
+                    // These must be set in your jenkins/docker-compose.yml or passed to the agent
+                    withEnv(['DOCKER_USERNAME=abishekdesign']) {
+                        // Assuming DOCKER_PASSWORD is set in Jenkins global config or passed safely
+                        // If user wants SIMPLEST way, we can ask them to set it in Jenkins -> Global Properties -> Env Vars
+                        
+                        // OR we can inject it via withCredentials but using 'secret text' which is easier to set up?
+                        // No, User struggled with Credentials UI.
+                        
+                        // Let's use specific credentials but standard username/password to eliminate ID confusion?
+                        // Actually, the user asked for "docker login with environment variables".
+                        
+                        // We will use 'withCredentials' binding to a 'Secret Text' or just standard credentials
+                        // created automatically? No.
+                        
+                        // Reverting to the "username/password" prompt strategy for simple use:
+                        // "docker login -u abishekdesign -p <PASSWORD_IN_ENV_VAR>"
+                        
+                        // We will assume DOCKER_PASSWORD is in the environment (set via Jenkins UI -> Manage -> System -> Global properties)
+                        sh 'echo $DOCKER_PASSWORD | docker login -u abishekdesign --password-stdin'
                         
                         // Tag and Push Frontend
                         sh "docker tag gui-frontend abishekdesign/gui-frontend:latest"

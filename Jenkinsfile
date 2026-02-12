@@ -50,13 +50,34 @@ pipeline {
             }
         }
 
-        stage('Configure Servers') {
+        stage('Push Docker Images') {
             steps {
                 script {
-                    echo 'Configuring Servers with Ansible...'
-                    dir('ansible') {
-                         // sh 'ansible-playbook -i inventory.ini playbook.yml' // Uncomment when ready
+                    echo 'Pushing Docker Images to Docker Hub...'
+                    withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
+                        sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
+                        
+                        // Tag and Push Frontend
+                        sh "docker tag gui-frontend abishekdesign/gui-frontend:latest"
+                        sh "docker push abishekdesign/gui-frontend:latest"
+                        
+                        // Tag and Push Backend
+                        sh "docker tag gui-backend abishekdesign/gui-backend:latest"
+                        sh "docker push abishekdesign/gui-backend:latest"
                     }
+                }
+            }
+        }
+
+        stage('Deploy to EKS') {
+            steps {
+                script {
+                    echo 'Deploying to EKS Cluster...'
+                    // Configure kubectl to use the EKS cluster created by Terraform
+                    sh "aws eks update-kubeconfig --region us-east-1 --name housing-expert-cluster"
+                    
+                    // Apply the Kubernetes manifests
+                    sh "kubectl apply -f k8s/deployment.yaml"
                 }
             }
         }

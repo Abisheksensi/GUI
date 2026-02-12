@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: housing-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: housing-frontend
+  template:
+    metadata:
+      labels:
+        app: housing-frontend
+    spec:
+      containers:
+      - name: frontend
+        image: abishekdesign/gui-frontend:latest
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: housing-frontend-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: housing-frontend
+  ports:
+  - port: 80
+    targetPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: housing-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: housing-backend
+  template:
+    metadata:
+      labels:
+        app: housing-backend
+    spec:
+      containers:
+      - name: backend
+        image: abishekdesign/gui-backend:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MONGO_URI
+          value: "mongodb://mongo-service:27017/housing" # Example, in real prod use Secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: housing-backend-service
+spec:
+  type: ClusterIP
+  selector:
+    app: housing-backend
+  ports:
+  - port: 5000
+    targetPort: 5000

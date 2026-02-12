@@ -7,6 +7,11 @@ services:
     ports:
       - "8080:8080"
       - "50000:50000"
+    environment:
+      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=us-east-1
     volumes:
       - jenkins_home:/var/jenkins_home
       # Mount the Docker socket so Jenkins can spawn container builds on the host
